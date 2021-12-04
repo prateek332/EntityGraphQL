@@ -16,7 +16,7 @@ In EntityGraphQL mutations are just .NET methods with the `[GraphQLMutation]` at
 ```
 public class PeopleMutations
 {
-    [GraphQLMutation("Add a new person to the system)]
+    [GraphQLMutation("Add a new person to the system")]
     public Expression<Func<DemoContext, Person>> AddNewPerson(DemoContext db, AddPersonArgs args)
     {
         var person = new Person
@@ -115,7 +115,7 @@ EntityGraphQL will use that `IServiceProvider` to resolve any services when call
 services.AddSingleton<IDemoService, DemoService>();
 
 // your mutation method
-[GraphQLMutation("Add a new person to the system)]
+[GraphQLMutation("Add a new person to the system")]
 public Expression<Func<DemoContext, Person>> AddNewPerson(DemoContext db, AddPersonArgs args, IDemoService demoService)
 {
     // do something cool with demoService
